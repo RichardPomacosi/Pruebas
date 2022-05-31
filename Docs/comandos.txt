@@ -1,0 +1,32 @@
+1. Configuracion la BD (postgres) en .env
+    DB_CONNECTION=pgsql
+    DB_HOST=127.0.0.1
+    DB_PORT=5432
+    DB_DATABASE=VetDB
+    DB_USERNAME=postgres
+    DB_PASSWORD=LLmm123@
+
+//Error al migrar
+    #configurar el php.ini //en el intalador de php
+        descomentar
+            >;pdo_psg
+2. Migrar los datos
+    >artisan migrate
+*****************************************************
+*************AUTH con Laravel SANCTUM****************
+Intregracion a Laravel
+    1. Instalar SANCTUM
+        >composer require laravel/canctum
+        //o verificar en composer.json
+    2. en config/sanctum.php
+
+    3. verificar si esta habilitado auth basado en token y SPA
+        en app/Http/kernel.php
+        #descomentar sanctum //Esto habilita el midleward
+    4. el usuario genera token ningun otro modelo
+Autenticacion:
+Generar el controlador authController
+    >php artisan make:controller AuthController
+#Importar el controlllador en routes
+    
+        
